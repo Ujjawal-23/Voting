@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN NOW</title>
+    
+        <style>
+            body{
+                text-align: center;
+                font-size: large;
+                background-color: lightcoral;
+            }
+            
+            #headersection h1{
+                color: rgb(24, 98, 47);
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-shadow: 1px 1px black;
+
+            }
+
+            input,select{
+                background-color: beige;
+                margin: 10px;
+                border-radius: 7px;
+                font-size: 25px;
+                padding-left: 15px;
+                padding-top: 5px;
+                width: 20%;
+                height: 40px;
+            }
+
+            
+            button{
+                padding: 7px;
+                background-color: blue;
+                color: rgb(200, 244, 226);
+                border: 2px blueviolet;
+                margin: 15px;
+                border-radius: 7px;
+                font-size: 25px;
+            }
+            #role{
+                background-color: beige;
+                border-radius: 5px;
+                font-size: 25px;
+                color:rgb(103, 112, 122);
+                width: 21.5%;
+                height: 48px;
+            }
+        </style>
+</head>
+<body>
+    
+    <div id="headersection">
+        <h1>Online Student Voting System</h1>
+    </div>
+    <hr>
+    <div id="bodysection">
+        <form action="api/login.php" method="POST">
+            <h2>Login</h2>
+            <input type="number" name="mobile" placeholder="Enter mobile Number" ><br>
+            <input type="password" name="password" placeholder="Enter password"><br>
+            <select name="role" id="role" value="role">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select><br>
+            <button type = "submit" >Login</button><br>
+            New User? <a href="routes/register.html">Register Here</a>
+        </form>
+    </div>
+    
+</body>
+</html>

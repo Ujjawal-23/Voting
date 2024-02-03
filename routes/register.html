@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    
+</head>
+<body>
+    <style>
+        h1{
+            color: rgb(24, 98, 47);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-shadow: 1px 1px black;
+
+        }
+
+        body{
+            text-align: center;
+            font-size: large;
+            background-color: lightcoral;
+        }
+        #headersection{
+            padding: 5px ;
+        }
+        #headersection h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        input,select{
+                background-color: beige;
+                margin: 10px;
+                border-radius: 7px ;
+                font-size: 25px;
+                padding-left: 10px;
+                padding-top: 5px;
+                width: 20%;
+                height: 40px;
+            }
+
+        button{
+            padding: 5px;
+            background-color: blue;
+            color: rgb(200, 244, 226);
+            border: 5px rgb(0, 0, 0);
+            margin: 15px;
+            border-radius: 5px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+
+        #address{
+            width: 43%;
+        }
+        #photo{
+            width: 44%;
+            margin-top: 15px;
+            padding-bottom: 10px;
+            height: 45px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #role{
+            background-color: beige;
+                border-radius: 5px;
+                font-size: 25px;
+                color:rgb(103, 112, 122);
+                width: 15%;
+        }
+    
+    </style>
+    <h1>Online Student Voting System</h1><hr>
+
+    <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+
+        <h2>Registration</h2>
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="mobile" placeholder="Mobile Number" > <br>
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="cpassword" placeholder="Confirm Password"> <br>
+        <input id="address" type="text" name="address" placeholder="Address"> 
+        <center>
+            <div id="photo">
+                Upload Image: <input style = "width: 500px; background-color: transparent; padding-top: 0.1px; padding-bottom: 1px;" id="uploadimg" type="file" name="photo">
+            </div>
+        </center>
+
+        <center>
+            <div id="photo" >
+                Select role:<select id="role" name="role" >
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select><br>
+            </div>
+        </center>
+
+        <button type="submit">Register</button><br>
+        Already registered? <a href="../index.html">Login Here</a>
+    </form>
+    
+</body>
+</html>
